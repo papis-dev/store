@@ -1,10 +1,21 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <TheNavigation/>
   </nav>
   <router-view/>
+  <TheFooter/>
 </template>
+
+<script>
+import TheNavigation from '@/components/TheNavigation.vue';
+import TheFooter from '@/components/TheFooter.vue';
+
+export default {
+  components: {
+    TheNavigation, TheFooter,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -17,6 +28,7 @@
 
 nav {
   padding: 30px;
+  background-color: #F8E3C3;
 }
 
 nav a {
